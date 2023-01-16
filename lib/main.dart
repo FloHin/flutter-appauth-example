@@ -73,11 +73,11 @@ class _MyHomePageState extends State<MyHomePage> {
   String? _userInfo;
 
   // For a list of client IDs, go to https://demo.duendesoftware.com
-  final String _clientId = 'flutter_appauth_example';
+  final String _clientId = 'konekta-web-admin';
   final String _redirectUrl = 'http://localhost:55273/#/oauthredirect';
   final String _issuer = 'https://demo.duendesoftware.com';
   final String _discoveryUrl =
-      'https://XXX/.well-known/openid-configuration';
+      'https://sso.ossi-austria.org/realms/amigo-test-ocal/.well-known/openid-configuration';
   final String _postLogoutRedirectUrl = 'com.duendesoftware.demo:/';
   final List<String> _scopes = <String>[
     'openid',
@@ -90,10 +90,10 @@ class _MyHomePageState extends State<MyHomePage> {
   final AuthorizationServiceConfiguration _serviceConfiguration =
       const AuthorizationServiceConfiguration(
     authorizationEndpoint:
-        'XXX/protocol/openid-connect/auth',
+        'https://sso.ossi-austria.org/realms/amigo-test-ocal/protocol/openid-connect/auth',
     tokenEndpoint:
-        'XXX/protocol/openid-connect/token',
-    endSessionEndpoint: 'XXX/protocol/openid-connect/logout',
+        'https://sso.ossi-austria.org/realms/amigo-test-ocal/protocol/openid-connect/token',
+    endSessionEndpoint: 'https://sso.ossi-austria.org/realms/amigo-test-ocal/protocol/openid-connect/logout',
   );
 
 
